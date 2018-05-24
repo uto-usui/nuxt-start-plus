@@ -1,0 +1,22 @@
+// - - - - - - - - - - - - - - - - - - - -
+//
+// section
+//
+// - - - - - - - - - - - - - - - - - - - -
+$section-max-width: 1200px;
+$section-gutter-mobile: 15px;
+$section-gutter-desktop: 120px;
+
+@mixin section-default {
+  $max-width: 1200px + $section-gutter-desktop * 2;
+  max-width: $max-width;
+  padding-left: $section-gutter-mobile;
+  padding-right: $section-gutter-mobile;
+  //
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $section-gutter-desktop;
+    padding-right: $section-gutter-desktop;
+  }
+}

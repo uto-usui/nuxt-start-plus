@@ -1,0 +1,78 @@
+html {
+  font-size: $base-fontsize;
+}
+
+body {
+  @include fontsize();
+  font-family: $font-sans-serif;
+  font-weight: $base-fontweight;
+  color: $text-color;
+  background-color: $white;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .08em;
+  // font-feature-settings: "pkna";
+  //
+  //.safari & {
+  //  font-feature-settings : "pkna"; // follow back -- ios10 safari10
+  //}
+  @media screen\0 {
+    font-family: $font-ie;
+  }
+}
+
+a {
+  color: $black;
+}
+
+img {
+  //max-width: 100%;
+  width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba($text-color, 1);
+  padding: 0;
+}
+
+br {
+  line-height: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: $black;
+  outline: none;
+}
+
+::selection {
+  color: $black;
+  background: rgba($primary-color, .7);
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  //
+  &.is-sub {
+    padding-top: 52px;
+    //
+    @include desktop {
+      padding-top: 72px;
+    }
+  }
+}
